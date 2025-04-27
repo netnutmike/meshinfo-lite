@@ -368,7 +368,7 @@ def serve_static(filename):
         node_telemetry = md.get_node_telemetry(node_id)
         node_route = md.get_route_coordinates(node_id)
         telemetry_graph = draw_graph(node_telemetry)
-        lp = LOSProfile(nodes, node_id)
+        #  lp = LOSProfile(nodes, node_id)
         return render_template(
                 f"node.html.j2",
                 auth=auth(),
@@ -377,7 +377,7 @@ def serve_static(filename):
                 nodes=nodes,
                 hardware=meshtastic_support.HardwareModel,
                 meshtastic_support=meshtastic_support,
-                los_profiles=lp.get_profiles(),
+                los_profiles={},
                 telemetry_graph=telemetry_graph,
                 node_route=node_route,
                 utils=utils,
