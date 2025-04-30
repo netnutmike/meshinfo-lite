@@ -268,7 +268,7 @@ WHERE n.ts_seen > FROM_UNIXTIME(%s)"""
 
     def get_chat(self):
         chats = []
-        sql = "SELECT DISTINCT * FROM text ORDER BY ts_created DESC"
+        sql = "SELECT DISTINCT * FROM text WHERE to_id = 0xFFFFFFFF ORDER BY ts_created DESC"
         cur = self.db.cursor()
         cur.execute(sql)
         rows = cur.fetchall()
