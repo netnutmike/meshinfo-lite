@@ -1,0 +1,7 @@
+topic read msh/#
+
+user meshinfo
+topic readwrite msh/#
+
+user meshdev
+topic readwrite msh/#

@@ -54,13 +54,16 @@
             Tools
           </a>
           <div class="dropdown-menu" aria-labelledby="toolsDropdown">
-            <a class="dropdown-item" href="https://meshview.zr1rf.za.net/">MeshView</a>
-            <a class="dropdown-item" href="https://meshtastic.liamcottle.net/?lat=-33.952188819072816&lng=378.6568450927735&zoom=11">Liam's Map</a>
-            <a class="dropdown-item" href="https://meshmap.net/">MeshMap</a>
+            <a class="dropdown-item" target="_blank" href="https://handsontechorg.weebly.com/meshtastic.html">Hands-On-Tech</a>
+            <a class="dropdown-item" target="_blank" href="https://jaxmesh.org">jaxmap Florida</a>
+            <a class="dropdown-item" target="_blank" href="https://meshtastic.liamcottle.net/?lat=28.85970894250466&lng=278.0550384521485&zoom=11">Liam's Map</a>
+            <a class="dropdown-item" target="_blank" href="https://meshmap.net/">MeshMap</a>
+            <a class="dropdown-item" target="_blank" href="https://site.meshtastic.org/">Meshtastic Site Planner</a>
+            <a class="dropdown-item" target="_blank" href="https://heywhatsthat.com/profiler.html">HWT Path Profiler</a>
           </div>
         </li>
-        <li class="nav-item{% if this_page == "#MeshtasticMonday" %} active{% endif %}">
-          <a class="nav-link" href="monday.html">#MeshtasticMonday</a>
+        <li class="nav-item{% if this_page == "netpage" %} active{% endif %}">
+          <a class="nav-link" href="monday.html">#{{ config["net"]["name"] }}</a>
         </li>
       </ul>
       {% if not auth %}

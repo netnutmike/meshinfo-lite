@@ -9,10 +9,14 @@ services:
       MYSQL_PASSWORD: passw0rd
     volumes:
       - ./mysql_data:/var/lib/mysql
+    ports:
+      - 3306:3306
     networks:
       - backend
   meshinfo:
-    image: ghcr.io/dadecoza/meshinfo-lite:0.1.5-za
+    #image: ghcr.io/dadecoza/meshinfo-lite:0.1.5-za
+    image: netnutmike/meshinfo:latest
+    pull_policy: never
     depends_on:
       - mariadb
     volumes:
@@ -20,11 +24,22 @@ services:
     environment:
       - PYTHONUNBUFFERED=1
     ports:
-      - 8000:8000
+      - 80:8001
     networks:
       - backend
     restart: always
-  
+
+  mqtt:
+    container_name: mqtt
+    image: eclipse-mosquitto:latest
+    ports:
+      - 1883:1883
+    volumes:
+      - ./mosquitto/data:/mosquitto/data:rw
+      - ./mosquitto/config:/mosquitto/config:rw
+      - ./mosquitto/log:/mosquitto/log:rw
+    restart: always
+
 networks:       
   backend:
     driver: bridge

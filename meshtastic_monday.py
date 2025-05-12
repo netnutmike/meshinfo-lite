@@ -14,10 +14,10 @@ class MeshtasticMonday:
                 continue
             ts = chat["ts_created"]
             day = strftime('%w', localtime(ts))
-            if day != "1":
-                continue
+            #if day != "3":
+            #    continue
             text = chat["text"]
-            if "meshtasticmonday" not in text.lower():
+            if "meshtasticwednesday" not in text.lower():
                 continue
             frm = chat["from"]
             current = frm + "." + text
