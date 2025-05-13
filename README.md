@@ -1,4 +1,4 @@
-# MeshInfo-Lite
+# MeshInfo-Lite V2
 
 Realtime web UI to run against a Meshtastic regional or private mesh network.
 
