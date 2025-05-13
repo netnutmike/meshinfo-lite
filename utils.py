@@ -100,6 +100,15 @@ def graph_icon(name):
         "home": "house",
         "base": "house",
         "main": "house",
+        "garage": "house",
+        "attic": "house",
+        "solar": "solar",
+        "techo": "techo",
+        "t-echo": "techo",
+        "tdeck": "tdeck",
+        "t-deck": "tdeck",
+        "tbeam": "tbeam",
+        "t-beam": "tbeam",
         "mobile": "car",
         "portable": "portable",
         " hs": "tower",
@@ -111,6 +120,7 @@ def graph_icon(name):
         "gw": "gateway",
         "meshtastic": "meshtastic",
         "bbs": "bbs",
+        "heltec": "heltec",
         "narf": "narf"
     }
     for key, icon in icons.items():
