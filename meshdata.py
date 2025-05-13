@@ -426,7 +426,7 @@ WHERE id = %s
                         "short": node['short_name'],
                         "height": 30,
                         "stroke": None,
-                        'fill': {"src": utils.graph_icon(node['long_name'])}
+                        'fill': {"src": utils.graph_icon(node['long_name'],node['hw_model'])}
                     }
                 )
                 known_nodes.append(id)
@@ -461,7 +461,7 @@ WHERE id = %s
                         "short": to_node['short_name'],
                         "height": 30,
                         "stroke": None,
-                        'fill': {"src": utils.graph_icon(to_node['long_name'])}
+                        'fill': {"src": utils.graph_icon(to_node['long_name'],node['hw_model'])}
                     }
                 )
 

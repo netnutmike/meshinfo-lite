@@ -1,16 +1,16 @@
 [mesh]
-name=ZA Mesh
-description=Serving Meshtastic to South Africa.
-contact=dade@dade.co.za
-url=https://mesh.zr1rf.za.net
-latitude=-33.918861
-longitude=18.423300
+name=Villages Mesh
+description=Serving Meshtastic to The Villages and surrounding areas
+contact=mike@k3do.com
+url=https://handsontechorg.weebly.com/meshtastic.html
+latitude=28.81
+longitude=-81.97
 channel_key=1PG7OiApB1nwvP+rz05pAQ==
 
 [mqtt]
-broker=mqtt.zr1rf.za.net
+broker=mqtt.villagesmesh.com
 port=1883
-topic=msh/ZA/#
+topic=msh/US/FL/thevillages/#
 username=meshdev
 password=large4cats
 
@@ -21,12 +21,12 @@ password=passw0rd
 database=meshdata
 
 [webserver]
-port=8000
+port=8001
 
 [server]
 node_activity_prune_threshold=7200
 render_interval=15
-debug=true
+debug=false
 
 [geocoding]
 enabled=false
@@ -41,3 +41,14 @@ email=YOUR_EMAIL_ADDRESS
 password=SMTP_PASSWORD
 server=SMTP_SERVER
 port=SMTP_PORT
+
+[tools]
+Hands-On-Tech=https://handsontechorg.weebly.com/meshtastic.html
+jaxmap_Florida=https://jaxmesh.org
+Liams_Map=https://meshtastic.liamcottle.net/?lat=28.85970894250466&lng=278.0550384521485&zoom=11
+MeshMap=https://meshmap.net/
+Meshtastic_Site_planner=https://site.meshtastic.org/
+HWT_Path_Profiler=https://heywhatsthat.com/profiler.html
+
+[net]
+name=MeshtasticWednesday

@@ -93,8 +93,9 @@ def latlon_to_grid(lat, lon):
     )
 
 
-def graph_icon(name):
+def graph_icon(name, hwmodel):
     """Return the appropriate icon for a given node name."""
+    """If there is no nodename match, return the hardware type icon if defined"""
     icons = {
         "qth": "house",
         "home": "house",
@@ -123,9 +124,29 @@ def graph_icon(name):
         "heltec": "heltec",
         "narf": "narf"
     }
+
+    hwicons = {
+        "4": "tbeam",
+        "5": "heltec",
+        "6": "tbeam",
+        "7": "techo",
+        "9": "rak4631",
+        "10": "heltec",
+        "11": "heltec",
+        "25": "stationg1",
+        "31": "stationg2",
+        "43": "heltec",
+        "50": "tdeck"
+    }
+
     for key, icon in icons.items():
         if key in name.lower():
             return f"/images/icons/{icon}.png"
+        
+    for key, icon in hwicons.items():
+        if key in str(hwmodel):
+            return f"/images/icons/{icon}.png"
+        
     return "/images/icons/radio.png"
 
 
